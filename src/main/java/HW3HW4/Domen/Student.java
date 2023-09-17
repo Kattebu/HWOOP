@@ -1,4 +1,4 @@
-package HW3.Domen;
+package HW3HW4.Domen;
 
 public class Student extends Person implements Comparable<Student> {
     private int id;

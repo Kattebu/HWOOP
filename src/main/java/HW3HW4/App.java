@@ -1,8 +1,7 @@
-package HW3;
+package HW3HW4;
 
-import HW3.Domen.Student;
-import HW3.Domen.StudentGroup;
-import HW3.Domen.StudentStream;
+import HW3HW4.Controllers.AccountController;
+import HW3HW4.Domen.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -68,5 +67,37 @@ public class App {
         studSream1.sortGroupsById();
         System.out.println(
                 "сортировка групп по ID группы : \n" + studSream1.toString());
+
+        /**
+         * Создаем список учителей
+         */
+
+        Teacher t1 = new Teacher("Галина", 55, "Docent");
+        Teacher t2 = new Teacher("Татьяна", 57, "Docent");
+        Teacher t3 = new Teacher("Олег", 40, "KTN");
+        List<Teacher> teachList = new ArrayList<Teacher>();
+        teachList.add(t1);
+        teachList.add(t2);
+        teachList.add(t3);
+
+        System.out.println(new PersonComparator<Student>().compare(s1, s2));
+
+
+//        AccountController controller = new AccountController();
+//        controller.paySalary(t1, 50000);
+        AccountController.paySalary(t1, 50000);
+        //AccountController.averageAge()
+
+        /**
+         * Сравниваем учителей
+         */
+        System.out.println(new PersonComparator<Teacher>().compare(t2, t3));
+        /**
+         * Выводим средний возраст
+         */
+        System.out.println("Средний возраст учителей = " + AccountController.averageAge(teachList));
+        System.out.println("Средний возраст студентов группы 5123 = " + AccountController.averageAge(groupList1));
+        System.out.println("Средний возраст студентов группы 5124 = " + AccountController.averageAge(groupList2));
+        System.out.println("Средний возраст студентов группы 5125 = " + AccountController.averageAge(groupList3));
     }
 }

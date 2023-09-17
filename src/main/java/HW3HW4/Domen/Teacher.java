@@ -1,4 +1,4 @@
-package HW3.Domen;
+package HW3HW4.Domen;
 
 public class Teacher extends Person{
     public Teacher(String name, int age, String acaDegree) {

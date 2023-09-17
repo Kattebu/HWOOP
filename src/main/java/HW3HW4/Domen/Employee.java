@@ -1,4 +1,4 @@
-package HW3.Domen;
+package HW3HW4.Domen;
 
 public class Employee extends Person{
     private String special;

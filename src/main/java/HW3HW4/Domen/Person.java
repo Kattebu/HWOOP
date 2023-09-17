@@ -1,4 +1,4 @@
-package HW3.Domen;
+package HW3HW4.Domen;
 
 public abstract class Person {
     private String name;
@@ -29,4 +29,5 @@ public abstract class Person {
     public String toString() {
         return "Person = " + name + " age = " + age;
     }
+
 }
