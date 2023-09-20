@@ -50,6 +50,11 @@ public class ModelClassFile implements iGetModel{
         return students;
     }
 
+    @Override
+    public boolean deleteStudent(long id) {
+        return false;
+    }
+
     public void saveAllStudentToFile(List<Student> students)
     {
         try(FileWriter fw = new FileWriter(fileName, true))

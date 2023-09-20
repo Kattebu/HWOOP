@@ -14,4 +14,9 @@ public class ModelClassList implements iGetModel{
     public List<Student> getStudents() {
         return students;
     }
+
+    @Override
+    public boolean deleteStudent(long id) {
+        return false;
+    }
 }

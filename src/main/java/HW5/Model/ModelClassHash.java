@@ -22,4 +22,9 @@ public class ModelClassHash implements iGetModel{
     public List<Student> getStudents() {
         return new ArrayList<Student>(students.values());
     }
+
+    @Override
+    public boolean deleteStudent(long id) {
+        return false;
+    }
 }
